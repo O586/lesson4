@@ -1,0 +1,15 @@
+@mixin content($w, $h, $c) {
+  width: $w;
+  height: $h;
+  background-color: $c;
+}
+@mixin twitter-icon ($w, $h, $c) {
+  width: $w;
+  height: $h;
+  background-color: $c;
+}
+@mixin twitter-text ($w, $h, $c) {
+  width: $w;
+  height: $h;
+  background-color: $c;
+}

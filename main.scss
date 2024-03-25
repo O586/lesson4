@@ -1,0 +1,321 @@
+@import "./base/base";
+@import "./base/variables";
+@import "./base/mixins";
+
+body {
+  background-color: rgb(245, 137, 98);
+}
+.content {
+  @include content(100%, 250px, #0fb4e2);
+  margin-top: 100px;
+  display: flex;
+}
+.twitter-block {
+  display: flex;
+  border-right: 1px solid rgb(60, 57, 57);
+}
+
+.twitter-icon {
+  @include twitter-icon(80px, 250px, #0fb4e2);
+  transition: width 1s;
+  overflow: hidden;
+  background-image: url(.//base/image/twitter\ \(11\).png);
+  background-repeat: no-repeat;
+  background-position: 25% 45%;
+  position: relative;
+  right: 0px;
+}
+.twitter-text {
+  @include twitter-text(0px, 250px, #fefefe);
+  transition: width 1s;
+  overflow: hidden;
+
+  &__title {
+    width: 145px;
+    height: 45px;
+    font: $title-font;
+    font-size: $title-lrg;
+    margin: 40px 0px 0px 20px;
+  }
+  &__subtitle {
+    width: 365px;
+    height: 70px;
+    font: $subtitle-font;
+    font-size: $subtitle-lrg;
+    margin: 0px 0px 0px 20px;
+    line-height: 20px;
+  }
+}
+.twitter-block:hover .twitter-text {
+  width: 400px;
+}
+
+.twitter-icon::after {
+  content: "";
+  width: 0px;
+  height: 250px;
+  background-color: #49a1e9;
+  background-image: url(.//base/image/twitter\ \(10\).png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  background-position: 25% 45%;
+  left: 80px;
+  // margin-right: 80px;
+  transition: all 1s;
+}
+.twitter-block:hover .twitter-icon::after {
+  width: 80px;
+  left: 0px;
+}
+.facebook-block {
+  @extend .twitter-block;
+  // border-right: 1px solid rgb(60, 57, 57);
+}
+.facebook-icon {
+  @extend .twitter-icon;
+  background-color: #0fb4e2;
+  background-image: url(.//base/image/facebook\ \(5\).png);
+}
+.facebook-text {
+  @extend .twitter-text;
+  &__title {
+    font: $title-font;
+    font-size: $title-lrg;
+    margin: 40px 0px 0px 20px;
+  }
+  &__subtitle {
+    width: 365px;
+    height: 70px;
+    font: $subtitle-font;
+    font-size: $subtitle-lrg;
+    margin: 0px 0px 0px 20px;
+    line-height: 20px;
+  }
+}
+.facebook-icon::after {
+  content: "";
+  width: 0px;
+  height: 250px;
+  background-color: #2e779b;
+  background-image: url(.//base/image/facebook\ \(7\).png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  background-position: 25% 45%;
+  right: 80px;
+  // margin-left: 80px;
+  transition: all 1s;
+}
+.facebbok-block:hover .facebbok-icon::after {
+  width: 80px;
+  left: 0px;
+}
+.linkedln-block {
+  @extend .twitter-block;
+}
+.linkedln-icon {
+  @extend .twitter-icon;
+  background-image: url(.//base/image/linkedin\ \(3\).png);
+}
+.linkedln-text {
+ @extend .twitter-text;
+
+  &__title {
+    font: $title-font;
+    font-size: $title-lrg;
+    margin: 40px 0px 0px 20px;
+  }
+  &__subtitle {
+    width: 365px;
+    height: 70px;
+    font: $subtitle-font;
+    font-size: $subtitle-lrg;
+    margin: 0px 0px 0px 20px;
+    line-height: 20px;
+  }
+}
+.linkedln-icon::after {
+  content: "";
+  width: 0px;
+  height: 250px;
+  background-color:#46A8D9;
+  background-image: url(.//base/image/linkedin\ \(9\).png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  background-position: 25% 45%;
+  left: 80px;
+  // margin-left: 162px;
+  transition: all 1s;
+}
+.linkedln-block:hover .linkedln-icon::after {
+  width: 80px;
+  left: 0px;
+}
+.instagram-block {
+  @extend .twitter-block;
+}
+.instagram-icon {
+  @extend .twitter-icon;
+  background-image:url(.//base/image/instagram.png) ;
+}
+.instagram-text {
+  @extend .twitter-text;
+  &__title {
+    font: $title-font;
+    font-size: $title-lrg;
+    margin: 40px 0px 0px 20px;
+  }
+  &__subtitle {
+    width: 365px;
+    height: 70px;
+    font: $subtitle-font;
+    font-size: $subtitle-lrg;
+    margin: 0px 0px 0px 20px;
+    line-height: 20px;
+  }
+}
+.instagram-icon::after {
+  content: "";
+  width: 0px;
+  height: 250px;
+  background-color:#4fcb5a;
+  background-image: url(.//base/image/instagram\ \(1\).png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  background-position: 25% 45%;
+  left: 80px;
+
+  transition: all 1s;
+}
+.istagram-block:hover .istagram-icon::after {
+  width: 80px;
+  left: 80px;
+}
+.YouTube-block {
+  @extend .twitter-block;
+}
+.YouTube-icon {
+  @extend .instagram-icon;
+  background-image: url(.//base/image/youtube.png);
+
+}
+.YouTube-text {
+  @extend .twitter-text;
+  &__title {
+    font: $title-font;
+    font-size: $title-lrg;
+    margin: 40px 0px 0px 20px;
+  }
+  &__subtitle {
+    width: 365px;
+    height: 70px;
+    font: $subtitle-font;
+    font-size: $subtitle-lrg;
+    margin: 0px 0px 0px 20px;
+    line-height: 20px;
+  }
+}
+.YouTube-icon::after {
+  content: "";
+  width: 0px;
+  height: 250px;
+  background-color:red;
+  background-image: url(.//base/image/youtube\ \(1\).png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  left:80px;
+  background-position: 25% 45%;
+  transition: all 1s;
+}
+.YouTube-block:hover .YouTube-icon::after {
+  width: 80px;
+  left: 0px;
+ 
+}
+.Tumblr-block {
+  @extend .twitter-block;
+}
+.Tumblr-icon {
+  @extend .instagram-icon;
+  background-image:url(.//base/image/tumbler.png) ;
+}
+.Tumblr-text {
+  @extend .twitter-text;
+  &__title {
+    font: $title-font;
+    font-size: $title-lrg;
+    margin: 40px 0px 0px 20px;
+  }
+  &__subtitle {
+    width: 400px;
+    height: 70px;
+    font: $subtitle-font;
+    font-size: $subtitle-lrg;
+    margin: 0px 0px 0px 20px;
+    line-height: 20px;
+  }
+}
+
+.Tumblr-icon::after {
+  content: "";
+  width: 0px;
+  height: 250px;
+  background-color: rgb(28, 72, 117);
+  background-image: url(.//base/image/tumbler\ \(1\).png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  left:80px;
+  background-position: 25% 45%;
+  transition: all 1s;
+}
+.Tumblr-block:hover .Tumblr-icon::after {
+  width: 80px;
+  left: 0px;
+ 
+}
+.dribbble-block {
+  @extend .twitter-block;
+}
+.dribbble-icon {
+  @extend .instagram-icon;
+  background-image:url(.//base/image/dribbble.png) ;
+}
+.dribbble-text {
+  @extend .twitter-text;
+  &__title {
+    font: $title-font;
+    font-size: $title-lrg;
+    margin: 40px 0px 0px 20px;
+  }
+  &__subtitle {
+    width: 350px;
+    height: 70px;
+    font: $subtitle-font;
+    font-size: $subtitle-lrg;
+    margin: 0px 0px 0px 20px;
+    line-height: 20px;
+  }
+}
+.dribbble-icon::after {
+  content: "";
+  width: 0px;
+  height: 250px;
+  background-color: rgb(222, 109, 158);
+  background-image: url(.//base/image/dribbble\ \(1\).png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  left:80px;
+  background-position: 25% 45%;
+  transition: all 1s;
+}
+.dribbble-block:hover .dribbble-icon::after {
+  width: 80px;
+  left: 0px;
+ 
+}
